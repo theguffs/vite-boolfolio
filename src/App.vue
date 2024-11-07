@@ -26,9 +26,14 @@ export default {
 <template>
   <div id="app">
     <h1> progetti </h1>
-    <div class="projects-list">
-      <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
-    </div>
+    <nav>
+      <ul>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/projects">Projects</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+      </ul>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
